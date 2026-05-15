@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GANGAS Pure | Traditional Village Recipe Powders</title>
+    <title>Gangas Pure | Traditionally Crafted, Modern Convenience</title>
     <style>
         :root {
-            --brand-maroon: #700a10;
-            --brand-gold: #c3964d;
-            --bg-cream: #fbf9f4;
-            --text-dark: #2a1a18;
+            --maroon: #5c1315;
+            --gold: #af833a;
+            --text-dark: #3a221d;
+            --bg-cream: #fffaf2;
             --white: #ffffff;
-            --whatsapp-green: #25D366;
+            --green: #25D366;
         }
 
         * {
@@ -27,523 +27,515 @@
             line-height: 1.6;
         }
 
-        /* Top Navigation Header */
+        /* Top Header Navigation */
         header {
             background-color: var(--white);
-            border-bottom: 3px solid var(--brand-gold);
-            padding: 15px 5%;
+            border-bottom: 1px solid #f0e2d0;
+            padding: 15px 4%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(112, 10, 16, 0.06);
+            box-shadow: 0 2px 10px rgba(92, 19, 21, 0.05);
         }
 
-        .logo-container {
+        .logo-area {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
-        /* Pure CSS representation of the round character badge badge */
-        .mascot-badge {
-            width: 60px;
-            height: 60px;
+        /* SVG placeholder to simulate your round mascot logo badge */
+        .logo-placeholder {
+            width: 55px;
+            height: 55px;
+            background: radial-gradient(circle, var(--gold) 60%, var(--maroon) 100%);
             border-radius: 50%;
-            background: radial-gradient(circle, #e0b468 40%, var(--brand-maroon) 100%);
-            border: 3px solid var(--brand-gold);
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             color: var(--white);
-            font-size: 9px;
-            font-weight: 900;
-            text-align: center;
-            line-height: 1.1;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-
-        .brand-titles h1 {
-            font-size: 1.8rem;
-            color: var(--brand-maroon);
-            font-weight: 900;
-            letter-spacing: 0.5px;
-            line-height: 1;
-        }
-
-        .brand-titles span {
-            font-size: 0.85rem;
-            color: var(--brand-gold);
-            text-transform: uppercase;
-            letter-spacing: 3px;
+            font-size: 8px;
             font-weight: bold;
+            text-align: center;
+            border: 2px solid var(--gold);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+
+        .brand-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--maroon);
+            letter-spacing: 0.5px;
+        }
+
+        .brand-name span {
+            color: var(--gold);
             display: block;
-            margin-top: 2px;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         nav a {
             text-decoration: none;
             color: var(--text-dark);
-            font-weight: 700;
+            font-weight: 600;
+            font-size: 0.95rem;
             margin-left: 25px;
             text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            transition: color 0.3s;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
         }
 
-        nav a:hover {
-            color: var(--brand-maroon);
+        nav a:hover, nav a.active {
+            color: var(--maroon);
+            border-bottom: 2px solid var(--maroon);
+            padding-bottom: 4px;
         }
 
-        /* Hero Showcase Banner */
-        .hero-banner {
+        /* Hero Banner Section */
+        .hero {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: 1fr 1fr;
             align-items: center;
-            background: linear-gradient(135deg, #f7f3e9 0%, #fffbf2 100%);
-            padding: 60px 8%;
+            background-color: #fcf4e8;
+            border-bottom: 4px solid var(--maroon);
+            padding: 60px 6%;
             gap: 40px;
-            border-bottom: 1px solid #eadecc;
         }
 
-        .hero-content h2 {
-            color: var(--brand-maroon);
-            font-size: 3rem;
-            line-height: 1.15;
-            margin-bottom: 20px;
-            font-weight: 900;
+        .hero-text h1 {
+            color: var(--maroon);
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            font-weight: 800;
         }
 
-        .hero-content p {
-            font-size: 1.15rem;
-            color: #5c4845;
-            margin-bottom: 30px;
-            max-width: 600px;
-        }
-
-        .cta-button {
-            background-color: var(--brand-maroon);
-            color: var(--white);
-            padding: 14px 35px;
-            font-size: 1rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-decoration: none;
-            border-radius: 4px;
-            box-shadow: 0 4px 12px rgba(112, 10, 16, 0.3);
-            display: inline-block;
-            transition: all 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: #54060b;
-            transform: translateY(-2px);
-        }
-
-        .hero-label-preview {
-            background-color: #fff;
-            border: 4px dashed var(--brand-gold);
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-        }
-
-        .label-main-title {
-            font-size: 2.2rem;
-            color: var(--brand-maroon);
-            font-weight: bold;
-        }
-
-        .label-tagline {
-            font-size: 1rem;
-            color: var(--brand-gold);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: bold;
-        }
-
-        /* Features/Highlights Section */
-        .highlights-strip {
-            background-color: var(--brand-maroon);
-            color: var(--white);
-            padding: 25px 4%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .highlight-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            font-size: 0.95rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .highlight-circle {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            background-color: rgba(255,255,255,0.15);
-            border: 1px solid var(--brand-gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .hero-text p {
             font-size: 1.1rem;
+            color: #5a423d;
+            margin-bottom: 25px;
+            max-width: 520px;
         }
 
-        /* Product Catalog Grid Section */
-        .catalog-container {
-            padding: 70px 5%;
+        .hero-btn {
+            background-color: var(--maroon);
+            color: var(--white);
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(92,19,21, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        .hero-btn:hover {
+            background-color: #420d0f;
+        }
+
+        .hero-graphic {
+            position: relative;
+            background: #fff;
+            border: 8px solid #fff;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 40px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-graphic::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            opacity: 0.04;
+            background-image: radial-gradient(var(--maroon) 2px, transparent 2px);
+            background-size: 16px 16px;
+        }
+
+        .hero-food-title {
+            font-size: 2.2rem;
+            color: var(--maroon);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .hero-food-subtitle {
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        /* Quality Badges Row */
+        .promise-row {
+            background-color: var(--white);
+            padding: 30px 4%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-bottom: 1px solid #eedec8;
+        }
+
+        .promise-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--maroon);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .badge-container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .quality-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            font-weight: bold;
+            font-size: 0.75rem;
+            color: var(--maroon);
+            text-transform: uppercase;
+        }
+
+        .badge-circle {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #f7e6d2;
+            border: 2px solid var(--maroon);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        /* Products Grid Showcase Section */
+        .products-section {
+            padding: 60px 4%;
             text-align: center;
         }
 
-        .section-heading {
-            font-size: 2.4rem;
-            color: var(--brand-maroon);
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--maroon);
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
         }
 
-        .catalog-grid {
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
+            margin: 8px auto 0 auto;
+        }
+
+        .products-grid {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 25px;
+            margin-top: 40px;
         }
 
         .product-card {
             background-color: var(--white);
-            border: 1px solid #ebdcc5;
             border-radius: 12px;
-            width: 330px;
-            padding: 30px 25px;
-            text-align: left;
+            border: 1px solid #f2dec4;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            width: 300px;
+            padding: 25px 20px;
+            text-align: center;
+            position: relative;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-            position: relative;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(112, 10, 16, 0.08);
-            border-color: var(--brand-gold);
+            box-shadow: 0 8px 25px rgba(92,19,21, 0.08);
         }
 
-        .veg-icon {
-            color: #2e7d32;
-            border: 2px solid #2e7d32;
-            font-size: 10px;
-            padding: 1px 4px;
-            font-weight: 900;
-            width: fit-content;
-            margin-bottom: 15px;
-        }
-
-        .product-card h3 {
-            color: var(--brand-maroon);
-            font-size: 1.4rem;
-            margin-bottom: 5px;
-            font-weight: 800;
-        }
-
-        .card-tagline {
-            font-size: 0.85rem;
-            color: var(--brand-gold);
+        .badge-new {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--gold);
+            color: var(--white);
+            font-size: 0.7rem;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
+            padding: 3px 8px;
+            border-radius: 20px;
         }
 
-        .ingredients-list {
-            font-size: 0.88rem;
-            color: #614d4a;
-            background-color: #fdfcf9;
-            padding: 10px;
-            border-left: 3px solid var(--brand-gold);
-            margin-bottom: 20px;
-            border-radius: 0 4px 4px 0;
-        }
-
-        .meta-pricing {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px dashed #eadecc;
-            padding-top: 15px;
-            margin-bottom: 15px;
-        }
-
-        .meta-weight {
-            font-size: 0.9rem;
-            color: #7c6562;
-            font-weight: 600;
-        }
-
-        .meta-price {
-            font-size: 1.3rem;
-            color: var(--brand-maroon);
-            font-weight: 800;
-        }
-
-        .whatsapp-order-btn {
-            background-color: var(--brand-maroon);
-            color: var(--white);
-            text-align: center;
-            padding: 12px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 6px;
+        /* Adaptive graphic labels matching color-schemes */
+        .product-visual-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 15px auto;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+            font-weight: 900;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            font-size: 0.8rem;
             text-transform: uppercase;
-            font-size: 0.88rem;
-            transition: background-color 0.2s;
         }
 
-        .whatsapp-order-btn:hover {
-            background-color: var(--whatsapp-green);
+        .p-sambar  { background: radial-gradient(circle, #b83b1d, #691302); border-color: #eed6d1; }
+        .p-idli    { background: radial-gradient(circle, #d69838, #8c5607); border-color: #f7ebd7; }
+        .p-black   { background: radial-gradient(circle, #424733, #1f2415); border-color: #e0e2dc; }
+        .p-moringa { background: radial-gradient(circle, #4b7838, #204011); border-color: #e3ebd8; }
+        .p-pudina  { background: radial-gradient(circle, #2a8263, #0d422f); border-color: #daf0e8; }
+
+        .product-card h3 {
+            font-size: 1.25rem;
+            color: var(--maroon);
+            margin-bottom: 8px;
+            font-weight: 700;
         }
 
-        /* Business Footer Section */
-        footer {
-            background-color: var(--brand-maroon);
-            color: #f7e4e1;
-            padding: 50px 6% 30px 6%;
+        .product-card p {
+            font-size: 0.9rem;
+            color: #6e5854;
+            margin-bottom: 20px;
+            flex-grow: 1;
         }
 
-        .footer-layout {
+        .action-container {
             display: grid;
-            grid-template-columns: 1.2fr 1.8fr;
-            gap: 50px;
-            padding-bottom: 40px;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .btn-order {
+            background-color: var(--maroon);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn-order:hover {
+            background-color: var(--green);
+        }
+
+        /* Business Footer Informational Layout */
+        footer {
+            background-color: var(--maroon);
+            color: #fcdbd5;
+            padding: 45px 6% 30px 6%;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1.5fr;
+            gap: 40px;
+            padding-bottom: 30px;
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        .footer-about h4 {
+        .footer-brand h4 {
             color: var(--white);
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-            font-weight: 800;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
         }
 
-        .footer-about p {
-            color: #e5b3ac;
-            font-size: 0.95rem;
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #e5b2aa;
         }
 
-        .footer-details h4 {
-            color: var(--brand-gold);
+        .footer-links h5, .footer-contact h5 {
+            color: var(--gold);
             text-transform: uppercase;
-            font-size: 1rem;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
-
-        .details-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .info-block strong {
-            color: var(--white);
-            display: block;
-            margin-bottom: 4px;
             font-size: 0.95rem;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
         }
 
-        .info-block p, .info-block a {
-            font-size: 0.9rem;
-            color: #e5b3ac;
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #e5b2aa;
             text-decoration: none;
-        }
-
-        .info-block a:hover {
-            color: var(--white);
-        }
-
-        .fssai-pill {
-            background-color: rgba(255,255,255,0.08);
-            border: 1px solid var(--brand-gold);
-            padding: 10px 15px;
-            border-radius: 6px;
-            margin-top: 15px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
             font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
             color: var(--white);
         }
 
-        .fssai-pill span {
-            color: var(--brand-gold);
+        .footer-contact p {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .footer-copyright {
+        .footer-contact a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer-bottom {
             text-align: center;
-            padding-top: 30px;
-            font-size: 0.85rem;
-            color: #b07e77;
+            padding-top: 25px;
+            font-size: 0.8rem;
+            color: #c48c83;
         }
 
-        @media (max-width: 850px) {
-            .hero-banner { grid-template-columns: 1fr; padding: 40px 5%; text-align: center; }
-            .hero-content p { margin: 0 auto 30px auto; }
-            .footer-layout { grid-template-columns: 1fr; gap: 40px; }
-            .details-grid { grid-template-columns: 1fr; gap: 20px; }
+        @media (max-width: 768px) {
+            .hero { grid-template-columns: 1fr; padding: 40px 4%; text-align: center; }
+            .hero-text p { margin: 0 auto 25px auto; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .promise-row { flex-direction: column; gap: 20px; text-align: center; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-container">
-            <div class="mascot-badge">GANGAS<br>PURE</div>
-            <div class="brand-titles">
-                <h1>GANGAS</h1>
-                <span>Pure Brand</span>
-            </div>
+        <div class="logo-area">
+            <div class="logo-placeholder">GANGAS<br>PURE</div>
+            <div class="brand-name">GANGAS <span>Pure Brand</span></div>
         </div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#products">Products</a>
-            <a href="#contact">Contact Details</a>
+            <a href="#" class="active">Home</a>
+            <a href="#products">Our Range</a>
+            <a href="#about">Our Story</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section class="hero-banner">
-        <div class="hero-content">
-            <h2>Aromatic.<br>Traditional. Pure.</h2>
-            <p>Bringing back the authentic legacy of true village recipes. All spices are expertly curated, dry roasted, and stone ground for maximum natural nutrient retention and intense flavor profiles.</p>
-            <a href="#products" class="cta-button">Browse Spice Catalog</a>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Traditionally Crafted,<br>Modern Convenience</h1>
+            <p>100% hand-pounded & natural authentic village-style South Indian spice mixes and breakfast pods. Packed cleanly without preservatives, color additives, or hidden MSG.</p>
+            <a href="#products" class="hero-btn">Shop Our Powders</a>
         </div>
-        <div class="hero-label-preview">
-            <div class="label-main-title">Handmade Powders</div>
-            <div class="label-tagline">Stone Ground for Maximum Aroma</div>
-        </div>
-    </section>
-
-    <section class="highlights-strip">
-        <div class="highlight-item">
-            <div class="highlight-circle">✓</div> 100% Natural
-        </div>
-        <div class="highlight-item">
-            <div class="highlight-circle">✓</div> Hand-Pounded Recipe
-        </div>
-        <div class="highlight-item">
-            <div class="highlight-circle">✓</div> No Added Colors or Preservatives
+        <div class="hero-graphic">
+            <div class="hero-food-title">Authentic Food Powders</div>
+            <div class="hero-food-subtitle">Slow Roasted for Rich Flavor</div>
         </div>
     </section>
 
-    <section class="catalog-container" id="products">
-        <h2 class="section-heading">Traditional Village Recipes</h2>
+    <section class="promise-row" id="about">
+        <div class="promise-title">Our Pure Promise</div>
+        <div class="badge-container">
+            <div class="quality-badge">
+                <div class="badge-circle">🌱</div>
+                <span>100% Natural</span>
+            </div>
+            <div class="quality-badge">
+                <div class="badge-circle">🥣</div>
+                <span>Hand Pounded</span>
+            </div>
+            <div class="quality-badge">
+                <div class="badge-circle">🚫</div>
+                <span>No Preservatives</span>
+            </div>
+            <div class="quality-badge">
+                <div class="badge-circle">🍛</div>
+                <span>Village Recipe</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section" id="products">
+        <h2 class="section-title">Our Pure Range</h2>
         
-        <div class="catalog-grid">
+        <div class="products-grid">
             
             <div class="product-card">
-                <div>
-                    <div class="veg-icon">●</div>
-                    <h3>Sambar Powder</h3>
-                    <div class="card-tagline">Traditional Village Recipe</div>
-                    <div class="ingredients-list">
-                        <strong>Ingredients:</strong> Red Chilli, Coriander, Gram Dal, Stone Lentil, Clove, Fresh Bay leaf, Cumin, Black Pepper, Cinnamon, Caraway.
-                    </div>
-                </div>
-                <div>
-                    <div class="meta-pricing">
-                        <span class="meta-weight">Net Wt: 180gm</span>
-                        <span class="meta-price">₹179</span>
-                    </div>
-                    <a href="https://wa.me/919519915524?text=Hi%20Ganga%20Mart,%20I'm%20interested%20in%20purchasing%20your%20Handmade%20Sambar%20Powder%20(180g%20-%20%E2%82%B9179)." target="_blank" class="whatsapp-order-btn">💬 Order via WhatsApp</a>
+                <div class="product-visual-circle p-sambar">Sambar</div>
+                <h3>Traditional Sambar Powder</h3>
+                <p>Aromatic stone-ground blend with premium chilies, coriander seeds, cumin, stone lentils, and cloves for maximum native village aroma.</p>
+                <div class="action-container">
+                    <a href="https://wa.me/919514415524?text=Hi!%20I%20want%20to%20order%20the%20Gangas%20Pure%20Traditional%20Sambar%20Powder." target="_blank" class="btn-order">🛒 Order via WhatsApp</a>
                 </div>
             </div>
 
             <div class="product-card">
-                <div>
-                    <div class="veg-icon">●</div>
-                    <h3>Idli Podi</h3>
-                    <div class="card-tagline">Crunchy • Traditional • Spicy</div>
-                    <div class="ingredients-list">
-                        <strong>Ingredients:</strong> Urad Dal, Dal, Chana Dal, Dry Red Chilli, Sesame Seeds, Salt, Curry Leaves, Pepper, Cinnamon, Asafoetida.
-                    </div>
-                </div>
-                <div>
-                    <div class="meta-pricing">
-                        <span class="meta-weight">Net Wt: 180g</span>
-                        <span class="meta-price">₹269</span>
-                    </div>
-                    <a href="https://wa.me/919519915524?text=Hi%20Ganga%20Mart,%20I'm%20interested%20in%20purchasing%20your%20Handmade%20Idli%20Podi%20(180g%20-%20%E2%82%B9269)." target="_blank" class="whatsapp-order-btn">💬 Order via WhatsApp</a>
+                <div class="product-visual-circle p-idli">Idli Podi</div>
+                <h3>Premium Idli Podi Blend</h3>
+                <p>Crunchy, traditional, and spicy! Perfect breakfast sidekick made from premium Urad Dal, sesame seeds, and native spices.</p>
+                <div class="action-container">
+                    <a href="https://wa.me/919514415524?text=Hi!%20I%20want%20to%20order%20the%20Gangas%20Pure%20Premium%20Idli%20Podi%20Blend." target="_blank" class="btn-order">🛒 Order via WhatsApp</a>
                 </div>
             </div>
 
             <div class="product-card">
-                <div>
-                    <div class="veg-icon">●</div>
-                    <h3>Black Leaves Idli Dosa Powder</h3>
-                    <div class="card-tagline">Iron-Rich Curry Leaf Blend</div>
-                    <div class="ingredients-list">
-                        <strong>Ingredients:</strong> Fresh Handpicked Curry Leaves, Premium Dals, Roasted Dry Red Chilies, Select Native Spices.
-                    </div>
-                </div>
-                <div>
-                    <div class="meta-pricing">
-                        <span class="meta-weight">Net Wt: 180g</span>
-                        <span class="meta-price">₹249</span>
-                    </div>
-                    <a href="https://wa.me/919519915524?text=Hi%20Ganga%20Mart,%20I'm%20interested%20in%20purchasing%20your%20Black%20Leaves%20Idli%20Dosa%20Powder." target="_blank" class="whatsapp-order-btn">💬 Order via WhatsApp</a>
+                <span class="badge-new">Popular</span>
+                <div class="product-visual-circle p-black">Curry Leaf</div>
+                <h3>Curry Leaf Idli/Dosa Powder</h3>
+                <p>Authentic iron-packed "Black Leaves" mix featuring roasted dark curry leaves to support healthy digestion and robust health.</p>
+                <div class="action-container">
+                    <a href="https://wa.me/919514415524?text=Hi!%20I%20want%20to%20order%20the%20Gangas%20Pure%20Curry%20Leaf%20Idli/Dosa%20Powder." target="_blank" class="btn-order">🛒 Order via WhatsApp</a>
                 </div>
             </div>
 
             <div class="product-card">
-                <div>
-                    <div class="veg-icon">●</div>
-                    <h3>Moringa Powder</h3>
-                    <div class="card-tagline">Nutrient Rich • Traditionally Crafted</div>
-                    <div class="ingredients-list">
-                        <strong>Ingredients:</strong> Moringa Leaves (Drumstick Leaf Powder), Urad Dal, Moong Dal, Chana Dal, Dried Red Chillies, Black Peppercorns, Fenugreek Seeds, Asafoetida Powder, Cumin Seeds, Salt.
-                    </div>
-                </div>
-                <div>
-                    <div class="meta-pricing">
-                        <span class="meta-weight">Net Wt: 180gm</span>
-                        <span class="meta-price">₹359</span>
-                    </div>
-                    <a href="https://wa.me/919519915524?text=Hi%20Ganga%20Mart,%20I'm%20interested%20in%20purchasing%20your%20Handmade%20Moringa%20Powder%20(180g%20-%20%E2%82%B9359)." target="_blank" class="whatsapp-order-btn">💬 Order via WhatsApp</a>
+                <span class="badge-new">New</span>
+                <div class="product-visual-circle p-moringa">Moringa</div>
+                <h3>Nutrient-Rich Moringa Powder</h3>
+                <p>Traditionally crafted natural drumstick leaf mix combined with Urad Dal and fenugreek. Ideal to enjoy hot mixed into rice with ghee.</p>
+                <div class="action-container">
+                    <a href="https://wa.me/919514415524?text=Hi!%20I%20want%20to%20order%20the%20Gangas%20Pure%20Nutrient-Rich%20Moringa%20Powder." target="_blank" class="btn-order">🛒 Order via WhatsApp</a>
                 </div>
             </div>
 
             <div class="product-card">
-                <div>
-                    <div class="veg-icon">●</div>
-                    <h3>Readymix Pudina Powder</h3>
-                    <div class="card-tagline">Tangy, Herbal Digestive Mix</div>
-                    <div class="ingredients-list">
-                        <strong>Ingredients:</strong> Premium Dehydrated Mint Leaves, Roasted Split Lentils, Balanced South Indian Whole Spices.
-                    </div>
-                </div>
-                <div>
-                    <div class="meta-pricing">
-                        <span class="meta-weight">Net Wt: 180g</span>
-                        <span class="meta-price">₹229</span>
-                    </div>
-                    <a href="https://wa.me/919519915524?text=Hi%20Ganga%20Mart,%20I'm%20interested%20in%20purchasing%20your%20Readymix%20Pudina%20Powder." target="_blank" class="whatsapp-order-btn">💬 Order via WhatsApp</a>
+                <div class="product-visual-circle p-pudina">Pudina</div>
+                <h3>Digestive Pudina Powder</h3>
+                <p>A refreshing, savory herbal mix using clean, air-dried mint leaves and digestive spices to instantly elevate your breakfast profile.</p>
+                <div class="action-container">
+                    <a href="https://wa.me/919514415524?text=Hi!%20I%20want%20to%20order%20the%20Gangas%20Pure%20Digestive%20Pudina%20Powder." target="_blank" class="btn-order">🛒 Order via WhatsApp</a>
                 </div>
             </div>
 
@@ -551,33 +543,29 @@
     </section>
 
     <footer id="contact">
-        <div class="footer-layout">
-            <div class="footer-about">
-                <h4>GANGAS PURE BRAND</h4>
-                <p>Authentic, home-style culinary companion bringing traditionally made, clean food elements straight from our production unit to modern Indian kitchens.</p>
-                <div class="fssai-pill">
-                    🟢 FSSAI License No: <span>2242503001184</span>
-                </div>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h4>GANGAS PURE</h4>
+                <p>Committed to bringing back the true, unadulterated food flavors of South Indian households, processed exactly the way mother used to make it.</p>
             </div>
-            
-            <div class="footer-details">
-                <h4>Official Brand Desk</h4>
-                <div class="details-grid">
-                    <div class="info-block">
-                        <strong>Ganga Mart Premises</strong>
-                        <p>No.1/1931-H, Kannammal Complex,<br>Dharmapuri, Tamil Nadu, India,<br>Pin Code: 636701</p>
-                    </div>
-                    <div class="info-block">
-                        <strong>Digital Desk</strong>
-                        <p>E-Mail: <a href="mailto:gangafresh@gmail.com">gangafresh@gmail.com</a></p>
-                        <p style="margin-top: 5px;">Call / Order WhatsApp:<br><a href="https://wa.me/919519915524" style="font-weight: bold; color: #fff;">+91 95199 15524</a></p>
-                    </div>
-                </div>
+            <div class="footer-links">
+                <h5>Quick Navigation</h5>
+                <ul>
+                    <li><a href="#">Home Base</a></li>
+                    <li><a href="#products">Our Range</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h5>Ganga Mart Address</h5>
+                <p>📍 No.1/1931-H, Kannammal Complex,<br>Dharmapuri, Tamil Nadu, India, 636701</p>
+                <p>📧 Email: <a href="mailto:gangafress@gmail.com">gangafress@gmail.com</a></p>
+                <p>📞 Order Support: <a href="https://wa.me/919514415524">+91 95144 15524</a></p>
+                <p style="color: var(--gold); font-size: 0.8rem; margin-top: 10px;">📄 FSSAI No: 2242503001184</p>
             </div>
         </div>
-        
-        <div class="footer-copyright">
-            &copy; 2026 GANGAS PURE (Ganga Mart). Hand-pounded with strict hygienic standards. All Rights Reserved.
+        <div class="footer-bottom">
+            &copy; 2026 Gangas Pure Brand. Lovingly Crafted with Pride. All Rights Reserved.
         </div>
     </footer>
 
