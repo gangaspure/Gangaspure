@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GANGAS Pure | Traditional Village Recipe Powders</title>
+    <style>
+        :root {
+            --brand-maroon: #700a10;
+            --brand-gold: #c3964d;
+            --bg-cream: #fbf9f4;
+            --text-dark: #2a1a18;
+            --white: #ffffff;
+            --whatsapp-green: #25D366;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Top Navigation Header */
+        header {
+            background-color: var(--white);
+            border-bottom: 3px solid var(--brand-gold);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(112, 10, 16, 0.06);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Pure CSS representation of the round character badge badge */
+        .mascot-badge {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #e0b468 40%, var(--brand-maroon) 100%);
+            border: 3px solid var(--brand-gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            font-size: 9px;
+            font-weight: 900;
+            text-align: center;
+            line-height: 1.1;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .brand-titles h1 {
+            font-size: 1.8rem;
+            color: var(--brand-maroon);
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            line-height: 1;
+        }
+
+        .brand-titles span {
+            font-size: 0.85rem;
+            color: var(--brand-gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+            display: block;
+            margin-top: 2px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            margin-left: 25px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--brand-maroon);
+        }
+
+        /* Hero Showcase Banner */
+        .hero-banner {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            background: linear-gradient(135deg, #f7f3e9 0%, #fffbf2 100%);
+            padding: 60px 8%;
+            gap: 40px;
+            border-bottom: 1px solid #eadecc;
+        }
+
+        .hero-content h2 {
+            color: var(--brand-maroon);
+            font-size: 3rem;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: #5c4845;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .cta-button {
+            background-color: var(--brand-maroon);
+            color: var(--white);
+            padding: 14px 35px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(112, 10, 16, 0.3);
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #54060b;
+            transform: translateY(-2px);
+        }
+
+        .hero-label-preview {
+            background-color: #fff;
+            border: 4px dashed var(--brand-gold);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+        }
+
+        .label-main-title {
+            font-size: 2.2rem;
+            color: var(--brand-maroon);
+            font-weight: bold;
+        }
+
+        .label-tagline {
+            font-size: 1rem;
+            color: var(--brand-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        /* Features/Highlights Section */
+        .highlights-strip {
+            background-color: var(--brand-maroon);
+            color: var(--white);
+            padding: 25px 4%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .highlight-circle {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.15);
+            border: 1px solid var(--brand-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        /* Product Catalog Grid Section */
+        .catalog-container {
+            padding: 70px 5%;
+            text-align: center;
+        }
+
+        .section-heading {
+            font-size: 2.4rem;
+            color: var(--brand-maroon);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        .catalog-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--white);
+            border: 1px solid #ebdcc5;
+            border-radius: 12px;
+            width: 330px;
+            padding: 30px 25px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(112, 10, 16, 0.08);
+            border-color: var(--brand-gold);
+        }
+
+        .veg-icon {
+            color: #2e7d32;
+            border: 2px solid #2e7d32;
+            font-size: 10px;
+            padding: 1px 4px;
+            font-weight: 900;
+            width: fit-content;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            color: var(--brand-maroon);
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            font-weight: 800;
+        }
+
+        .card-tagline {
+            font-size: 0.85rem;
+            color: var(--brand-gold);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .ingredients-list {
+            font-size: 0.88rem;
+            color: #614d4a;
+            background-color: #fdfcf9;
+            padding: 10px;
+            border-left: 3px solid var(--brand-gold);
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .meta-pricing {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px dashed #eadecc;
+            padding-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .meta-weight {
+            font-size: 0.9rem;
+            color: #7c6562;
+            font-weight: 600;
+        }
+
+        .meta-price {
+            font-size: 1.3rem;
+            color: var(--brand-maroon);
+            font-weight: 800;
+        }
+
+        .whatsapp-order-btn {
+            background-color: var(--brand-maroon);
+            color: var(--white);
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-transform: uppercase;
+            font-size: 0.88rem;
+            transition: background-color 0.2s;
+        }
+
+        .whatsapp-order-btn:hover {
+            background-color: var(--whatsapp-green);
+        }
+
+        /* Business Footer Section */
+        footer {
+            background-color: var(--brand-maroon);
+            color: #f7e4e1;
+            padding: 50px 6% 30px 6%;
+        }
+
+        .footer-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1.8fr;
+            gap: 50px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-about h4 {
+            color: var(--white);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .footer-about p {
+            color: #e5b3ac;
+            font-size: 0.95rem;
+        }
+
+        .footer-details h4 {
+            color: var(--brand-gold);
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .info-block strong {
+            color: var(--white);
+            display: block;
+            margin-bottom: 4px;
+            font-size: 0.95rem;
+        }
+
+        .info-block p, .info-block a {
+            font-size: 0.9rem;
+            color: #e5b3ac;
+            text-decoration: none;
+        }
+
+        .info-block a:hover {
+            color: var(--white);
+        }
+
+        .fssai-pill {
+            background-color: rgba(255,255,255,0.08);
+            border: 1px solid var(--brand-gold);
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: var(--white);
+        }
+
+        .fssai-pill span {
+            color: var(--brand-gold);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding-top: 30px;
+            font-size: 0.85rem;
+            color: #b07e77;
+        }
+
+        @media (max-width: 850px) {
+            .hero-banner { grid-template-columns: 1fr; padding: 40px 5%; text-align: center; }
+            .hero-content p { margin: 0 auto 30px auto; }
+            .footer-layout { grid-template-columns: 1fr; gap: 40px; }
+            .details-grid { grid-template-columns: 1fr; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div class="mascot-badge">GANGAS<br>PURE</div>
+            <div class="brand-titles">
+                <h1>GANGAS</h1>
+                <span>Pure Brand</span>
+            </div>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact Details</a>
+        </nav>
+    </header>
+
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h2>Aromatic.<br>Traditional. Pure.</h2>
+            <p>Bringing back the authentic legacy of true village recipes. All spices are expertly curated, dry roasted, and stone ground for maximum natural nutrient retention and intense flavor profile.</p>
+            <a href="#products" class="cta-button">Browse Spice Catalog</a>
+        </div>
+        <div class="hero-label-preview">
+            <div class="label-main-title">Handmade Powders</div>
+            <div class="label-tagline">Stone Ground for Maximum Aroma</div>
+        </div>
+    </section>
+
+    <section class="highlights-strip">
+        <div class="highlight-item">
+            <div class="highlight-circle">✓</div> 100% Natural
+        </div>
+        <div class="highlight-item">
+            <div class="highlight-circle">✓</div> Hand-Pounded Recipe
+        </div>
+        <div class="highlight-item">
+            <div class="highlight-circle">✓</div> No Added Colors or Preservatives
+        </div>
+    </section>
+
+    <section class="catalog-container" id="products">
+        <h2 class="section-heading">Traditional Village Recipes</h2>
+        
+        <div class="catalog-grid">
+            
+            <div class="product-card">
+                <div>
+                    <div class="veg-icon">●</div>
+                    <h3>Sambar Powder</h3>
+                    <div class="card-tagline">Traditional Village Recipe</div>
+                    <div class="ingredients-list">
+                        <strong>Ingredients:</strong> Red Chilli, Coriander, Gram Dal, Stone Lentil, Clove, Fresh Bay leaf, Cumin, Black Pepper, Cinnamon, Caraway.
+                    </div>
+                </div>
+                <div>
+                    <div class="meta-pricing">
+                        <span class="meta-weight">Net Wt: 180gm</span>
+                        <span class="meta-price">₹179</span>
+                    </div>
+                    <a href="https://wa.me/919519915524?text=Hi%20Ganga%20Mart,%20I'm%20interested%20in%20purchasing%20your%20Handmade%20Sambar%20Powder%20(180g%20-%20%E2%82%B9179)." target="_blank" class="whatsapp-order-btn">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <div class="veg-icon">●</div>
+                    <h3>Idli Podi</h3>
+                    <div class="card-tagline">Crunchy • Traditional • Spicy</div>
+                    <div class="ingredients-list">
+                        <strong>Ingredients:</strong> Urad Dal, Dal, Chana Dal, Dry Red Chilli, Sesame Seeds, Salt, Curry Leaves, Pepper, Cinnamon, Asafoetida.
+                    </div>
+                </div>
+                <div>
+                    <div class="meta-pricing">
+                        <span class="meta-weight">Net Wt: 180g</span>
+                        <span class="meta-price">₹269</span>
+                    </div>
+                    <a href="https://wa.me/919519915524?text=Hi%20Ganga%20Mart,%20I'm%20interested%20in%20purchasing%20your%20Handmade%20Idli%20Podi%20(180g%20-%20%E2%82%B9269)." target="_blank" class="whatsapp-order-btn">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <div class="veg-icon">●</div>
+                    <h3>Black Leaves Idli Dosa Powder</h3>
+                    <div class="card-tagline">Iron-Rich Curry Leaf Blend</div>
+                    <div class="ingredients-list">
+                        <strong>Ingredients:</strong> Fresh Handpicked Curry Leaves, Premium Dals, Roasted Dry Red Chilies, Select Native Spices.
+                    </div>
+                </div>
+                <div>
+                    <div class="meta-pricing">
+                        <span class="meta-weight">Net Wt: 180g</span>
+                        <span class="meta-price">₹249</span>
+                    </div>
+                    <a href="https://wa.me/919519915524?text=Hi%20Ganga%20Mart,%20I'm%20interested%20in%20purchasing%20your%20Black%20Leaves%20Idli%20Dosa%20Powder." target="_blank" class="whatsapp-order-btn">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <div class="veg-icon">●</div>
+                    <h3>Moringa Powder</h3>
+                    <div class="card-tagline">Nutrient Rich • Traditionally Crafted</div>
+                    <div class="ingredients-list">
+                        <strong>Ingredients:</strong> Moringa Leaves (Drumstick Leaf Powder), Urad Dal, Moong Dal, Chana Dal, Dried Red Chillies, Black Peppercorns, Fenugreek Seeds, Asafoetida Powder.
+                    </div>
+                </div>
+                <div>
+                    <div class="meta-pricing">
+                        <span class="meta-weight">Net Wt: 180gm</span>
+                        <span class="meta-price">₹359</span>
+                    </div>
+                    <a href="https://wa.me/919519915524?text=Hi%20Ganga%20Mart,%20I'm%20interested%20in%20purchasing%20your%20Handmade%20Moringa%20Powder%20(180g%20-%20%E2%82%B9359)." target="_blank" class="whatsapp-order-btn">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <div class="veg-icon">●</div>
+                    <h3>Readymix Pudina Powder</h3>
+                    <div class="card-tagline">Tangy, Herbal Digestive Mix</div>
+                    <div class="ingredients-list">
+                        <strong>Ingredients:</strong> Premium Dehydrated Mint Leaves, Roasted Split Lentils, Balanced South Indian Whole Spices.
+                    </div>
+                </div>
+                <div>
+                    <div class="meta-pricing">
+                        <span class="meta-weight">Net Wt: 180g</span>
+                        <span class="meta-price">₹229</span>
+                    </div>
+                    <a href="https://wa.me/919519915524?text=Hi%20Ganga%20Mart,%20I'm%20interested%20in%20purchasing%20your%20Readymix%20Pudina%20Powder." target="_blank" class="whatsapp-order-btn">WhatsApp Order</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-layout">
+            <div class="footer-about">
+                <h4>GANGAS PURE BRAND</h4>
+                <p>Authentic, home-style culinary companion bringing traditionally made, clean food elements straight from our production unit to modern Indian kitchens.</p>
+                <div class="fssai-pill">
+                    🟢 FSSAI License No: <span>2242503001184</span>
+                </div>
+            </div>
+            
+            <div class="footer-details">
+                <h4>Official Brand Desk</h4>
+                <div class="details-grid">
+                    <div class="info-block">
+                        <strong>Ganga Mart Premises</strong>
+                        <p>No.1/1931-H, Kannammal Complex,<br>Dharmapuri, Tamil Nadu, India,<br>Pin Code: 636701</p>
+                    </div>
+                    <div class="info-block">
+                        <strong>Digital Desk</strong>
+                        <p>E-Mail: <a href="mailto:gangafress@gmail.com">gangafress@gmail.com</a></p>
+                        <p style="margin-top: 5px;">Call / Order WhatsApp:<br><a href="https://wa.me/919519915524" style="font-weight: bold; color: #fff;">+91 95199 15524</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            &copy; 2026 GANGAS PURE (Ganga Mart). Hand-pounded with strict hygienic standards. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
